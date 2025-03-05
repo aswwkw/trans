@@ -1,1 +1,1 @@
-grep -B 4 -E "message_signing: disabled|message_signing: enabled but not required" scan_results.txt | grep "Nmap scan report for" | awk '{print $NF}'
+grep -i -E "message_signing: (disabled|enabled but not required)" smb_scan.gnmap | awk '{print $2}'
