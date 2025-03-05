@@ -1,1 +1,1 @@
-awk '/445\/tcp open/{print prev} /Nmap scan report for/{prev=$NF}' nmap_results.txt
+grep -B 4 -E "message_signing: disabled|message_signing: enabled but not required" scan_results.txt | grep "Nmap scan report for" | awk '{print $NF}'
