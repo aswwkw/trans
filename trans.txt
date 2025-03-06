@@ -1,1 +1,2 @@
 grep -i -E "message_signing: (disabled|enabled but not required)" smb_scan.gnmap | awk '{print $2}'
+nmap -sV --script vnc-info,realvnc-auth-bypass,vnc-title -p 5800,5801,5900,5901
